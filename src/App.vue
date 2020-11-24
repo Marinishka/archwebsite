@@ -1,32 +1,29 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <default-layout v-if="$route.meta.layout == 'default'"></default-layout>
+  <blank-layout v-else-if="$route.meta.layout == 'blank'"></blank-layout>
+  <default-layout v-else></default-layout>
 </template>
 
+<script>
+
+import DefaultLayout from './layouts/default.vue'
+import BlankLayout from './layouts/blank.vue'
+
+export default {
+  components: {
+    DefaultLayout,
+    BlankLayout
+  },
+}
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  // Import custom SASS variable overrides, or alternatively
+  // define your variable overrides here instead
+  @import './assets/scss/bootstrap.custom.scss';
 
-#nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+  // Import Bootstrap and BootstrapVue source SCSS files
+  @import 'bootstrap/scss/bootstrap.scss';
+  @import 'bootstrap-vue/src/index.scss';  
+  @import './assets/scss/styles.scss';
+</style> 
