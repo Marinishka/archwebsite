@@ -6,6 +6,9 @@ import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import ResetPassword from '../views/ResetPassword.vue'
 import Profile from '../views/Profile.vue'
+import Subscriptions from '../views/Subscriptions.vue'
+import Billing from '../views/Billing.vue'
+
 import store from '../store'
 
 Vue.use(VueRouter)
@@ -37,6 +40,23 @@ const routes = [{
   component: Profile,
   meta: {
     layout: 'default',
+    requiresAuth: true
+  }
+}, {
+  path: '/subscriptions',
+  name: 'Subscriptions',
+  component: Subscriptions,
+  meta: {
+    layout: 'default',
+    requiresAuth: true
+  }
+}, {
+  path: '/billing-history',
+  name: 'Billing',
+  component: Billing,
+  meta: {
+    layout: 'default',
+    requiresAuth: true
   }
 }, {
   path: '/',

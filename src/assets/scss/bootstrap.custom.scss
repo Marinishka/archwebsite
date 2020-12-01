@@ -1,3 +1,71 @@
-$secondary: #EFEFEF;
-$secondary-dark: #323232;
-$primary: #3167F3;
+  $secondary: #EFEFEF;
+  $secondary-dark: #323232;
+  $primary: #3167F3;
+  $muted: #B5B5B5;
+
+
+  // Import Bootstrap and BootstrapVue source SCSS files
+#app-wrapper {
+  @import 'bootstrap/scss/bootstrap.scss';
+  @import 'bootstrap-vue/src/index.scss';  
+
+.muted {
+  background-color: $muted !important;
+}
+
+.muted-text {
+  color: #8D8D8D !important;
+}
+
+.subscription-button {
+  margin-top: 7.5em;
+}
+
+.border-2 {
+  border: 2px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+.subscription-1-text {
+  color: #3167F3;
+}
+
+.subscription-1-button {
+  background-color: #3167F3 !important;
+}
+
+.subscription-2-text {
+  color: #2F36DC;
+}
+
+.subscription-2-button {
+  background-color: #2F36DC !important;
+}
+
+p, span, h1, h2, h3, h4, table, td, th, tr, div {
+  color: #323232 !important;
+}
+
+
+a.router-link-active {
+  color: #fff !important;
+}
+
+.table th, .table td {
+  border-top: 0 !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #F6F6F6 !important;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #FBFBFB !important;
+}
+
+.table thead th {
+    border-bottom: 0 !important;
+}
+
+}
+
+
