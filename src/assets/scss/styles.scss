@@ -34,3 +34,9 @@ body {
   background-color: $secondary; 
 }
 }
+.nav-link.active svg {
+  fill: #fff !important;
+}
+.nav-link svg {
+  fill: $secondary-dark !important;
+}
