@@ -24,7 +24,7 @@ Vue.config.productionTip = false
 //  locale: "ru"
 //});
 const i18n = new VueI18n({
-  locale: location.href.search("/en/") >= 0 ? 'en' : 'ru',
+  locale: location.href.search("/ru") >= 0 ? 'ru' : 'en',
   messages: {
     en, 
     ru
