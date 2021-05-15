@@ -7,5 +7,8 @@ module.exports = {
       .use("i18n")
       .loader("@intlify/vue-i18n-loader")
       .end();
+    //console.log("config.module", config.optimisation)
+    //console.log("config", config)
+    config.optimization.usedExports(true).sideEffects(false).nodeEnv("production")
   }
 }
