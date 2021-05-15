@@ -7,5 +7,13 @@ module.exports = {
       .use("i18n")
       .loader("@intlify/vue-i18n-loader")
       .end();
+
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: `@import "@/assets/scss/variables.scss";`
+      }
+    }
   }
 }

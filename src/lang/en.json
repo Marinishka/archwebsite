@@ -1,0 +1,169 @@
+{
+  "btn-download": "Download",
+  "link-to-app-store": "App Store",
+  "link-to-google-play": "Google Play",
+  "alt-logo": "Logo Architeque",
+  "header":  {
+    "navigation": {
+      "toolkit" : "Tools",
+      "pricing": "Pricing" 
+    },
+    "user-block": {
+      "unlogged": "Sign in",
+      "logged": "Account"
+    }
+  },
+  "promo": {
+    "title" : "Creation and presentation of content in <span class='highlighted'>augmented</span> <span class='highlighted'>reality</span>",
+    "list": {
+      "first": "Upload your AR content to the app",
+      "second": "Share models via link or QR code",
+      "third": "Showcase unique AR scenes on mobile"
+    },
+    "alt-img": "Image of the Statue of Liberty model"
+  },
+  "toolkit": {
+    "title-charter": "Application for your device",
+    "title-section": {
+      "mac": "Architeque for Mac"
+    },
+    "text": "Edit and upload your AR scenes, manage your account and more",
+    "alt-img": {
+      "mac": "Mac App Image"
+    },
+    "btn-download": "Download",
+    "link-to-other-app": {
+      "mac": "Looking for Windows version?"
+    }
+  },
+  "development": {
+    "title": "Our developments",
+    "alt-img": {
+      "phones": "Mobile app Architeque",
+      "app": "Tablet app Architeque"
+    },
+    "list": {
+      "first": {
+        "title": "Mobile app (iOS / Android)",
+        "features": {
+          "first": "Registration is optional",
+          "second": "Ability to view downloaded scenes without internet connection",
+          "third": "Easily share links and QR codes of models"
+        }
+      },
+      "second": {
+        "title": "Инструментарий (Mac / Windows)",
+        "features": {
+          "first": "Создание и интеграция 3D сцен в Architeque",
+          "second": "Scene preview on devices without internet connection",
+          "third": "Ability to view downloaded scenes without internet connection"
+        }
+      }
+    }
+  },
+  "price": {
+    "title": "Pricing",
+    "link-to-pricing": "Go to pricing"
+  },
+  "invitation": {
+    "title": "Immerse in the AR world"
+  },
+  "footer": {
+    "nav-col": {
+      "first": {
+        "title": "Products",
+        "link-list": {
+          "first": "Architeque for dekstop",
+          "second": "Architeque App",
+          "third": "Pricing"
+        }
+      },
+      "second": {
+        "title": "Support",
+        "link-list": {
+          "first": "Privacy policy",
+          "second": "Terms of Use"
+        }
+      },
+      "third": {
+        "title": "Contacts",
+        "link-list": {
+          "first": "Models",
+          "second": "Postcards",
+          "third": "Questions & suggestion"
+        }
+      },
+      "fourth": {
+        "title": "Follow us",
+        "link-list": {
+          "first": "Facebook",
+          "second": "Instagram",
+          "third": "Twitter" 
+        }
+      }
+    },
+    "copyright": "Copyright © 2021 Architeque."
+  },
+  "pricing": {
+    "title-charter": "Pricing Architeque",
+    "title-section": "Choose your plan",
+    "pricing-list": {
+      "first": {
+        "title": "Free plan",
+        "amount": "$0",
+        "interval": "/Month",
+        "features": {
+          "title": "Standart features",
+          "list": {
+            "first": "10 models",
+            "second": "10 mb storage",
+            "third": "Storage functions",
+            "fourth": "Support functions"
+          }
+        }
+      },
+      "second": {
+        "title": "Advanced plan",
+        "amount": "$10",
+        "interval": "/Month",
+        "features": {
+          "title": "Advanced features",
+          "list": {
+            "first": "10 models",
+            "second": "100 mb storage",
+            "third": "More functions",
+            "fourth": "Support functions"
+          }
+        }
+      },
+      "third": {
+        "title": "Business plan",
+        "amount": "$49",
+        "interval": "/Month",
+        "features": {
+          "title": "Professional features",
+          "list": {
+            "first": "50 models",
+            "second": "500 mb storage",
+            "third": "Storage functions",
+            "fourth": "Support functions"
+          }
+        }
+      }
+    },
+    "link-to-subscriptions": "Choose plan"
+  },
+  "applying": {
+    "title": "Range of application",
+    "list": {
+      "first": {
+        "title": "Marketing and sales support",
+        "text": "Reduce your sales and promotion costs. Stop wasting money on making and reworking layouts, as well as delivering them to the customer. Share a link to the model of your product, and in a minute the buyer will be interested in studying your product in real conditions of use."
+      },
+      "second": {
+        "title": "Electronic commerce",
+        "text": "Increase your sales. Make it easier for customers to choose by giving them the opportunity to present your product in their home or office. The sales salon is no longer needed."
+      }
+    }
+  }
+}

@@ -1,20 +1,22 @@
 <template>
-  <b-jumbotron class="shadow-sm">
-    <div v-if="!isPasswordSent">
-      <h5>{{ $t('password_reset') }}</h5>
-      <b-form-input v-model="email" v-bind:placeholder="$t('email')"></b-form-input>
-      <b-alert :show="alert.state" :variant="alert.variant" class="mt-2">
+  <b-container class="mw-500">
+    <b-jumbotron class="shadow-sm">
+      <div v-if="!isPasswordSent">
+        <h5>{{ $t('password_reset') }}</h5>
+        <b-form-input v-model="email" v-bind:placeholder="$t('email')"></b-form-input>
+        <b-alert :show="alert.state" :variant="alert.variant" class="mt-2">
         {{alert.message}}
-      </b-alert>      
-      <b-button block variant="primary mt-3" @click="sendPassword()">{{ $t('reset_password') }}</b-button>
-      <div class="mt-4 text-center">{{ $t('remember_password') }} <router-link class="font-weight-bold" to="/login">{{ $t('login_btn') }}</router-link></div>
-    </div>
-    <div v-else class="text-center" vertical-align="center">
-      <b-icon-envelope-fill variant="primary" scale="5"></b-icon-envelope-fill>
-      <p class="mt-5">{{ $t('instruction_sent') }}</p>
-      <b-button block variant="primary mt-3" @click="$router.push({name: 'Login'})">OK</b-button>
-    </div>
-  </b-jumbotron>
+        </b-alert>      
+        <b-button block variant="primary mt-3" @click="sendPassword()">{{ $t('reset_password') }}</b-button>
+        <div class="mt-4 text-center">{{ $t('remember_password') }} <router-link class="font-weight-bold" to="/login">{{ $t('login_btn') }}</router-link></div>
+      </div>
+      <div v-else class="text-center" vertical-align="center">
+        <b-icon-envelope-fill variant="primary" scale="5"></b-icon-envelope-fill>
+        <p class="mt-5">{{ $t('instruction_sent') }}</p>
+        <b-button block variant="primary mt-3" @click="$router.push({name: 'Login'})">OK</b-button>
+      </div>
+    </b-jumbotron>
+  </b-container>
 </template>
 <i18n>
 {

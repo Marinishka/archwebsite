@@ -1,18 +1,27 @@
 <template>
-  <b-jumbotron class="shadow-sm">
-    <div>
-
-      <h3>{{ $t('login_header') }}</h3>
-      <b-form-input v-bind:placeholder="$t('email')" v-model="email"></b-form-input>
-      <b-form-input type="password" class="mt-2" v-bind:placeholder="$t('password')" v-model="password"></b-form-input>
-      <b-alert :show="alert.state" :variant="alert.variant" class="mt-2">
+  <b-container class="mw-500">
+    <b-jumbotron class="shadow-sm">
+      <div>
+        <h3>{{ $t('login_header') }}</h3>
+        <b-form-input v-bind:placeholder="$t('email')" v-model="email"></b-form-input>
+        <b-form-input type="password" class="mt-2" v-bind:placeholder="$t('password')" v-model="password"></b-form-input>
+        <b-alert :show="alert.state" :variant="alert.variant" class="mt-2">
         {{alert.message}}
-      </b-alert>      
-      <b-button block variant="primary mt-3" @click="login()">{{$t('login_btn')}} </b-button>
-      <div class="mt-4 text-center">{{$t('no_account')}} <router-link class="font-weight-bold" to="/register">{{$t('register_link')}}</router-link></div>
-      <div class="mt-4 text-center fs-075">{{$t('forgot_password')}} <router-link to="/reset-password">{{$t('click_here')}}</router-link></div>
-    </div>
-  </b-jumbotron>
+        </b-alert>      
+        <b-button block variant="primary mt-3" @click="login()">
+          {{$t('login_btn')}}
+        </b-button>
+        <div class="mt-4 text-center">
+          {{$t('no_account')}}
+          <router-link class="font-weight-bold" to="/register">{{$t('register_link')}}</router-link>
+        </div>
+        <div class="mt-4 text-center fs-075">
+          {{$t('forgot_password')}}
+          <router-link to="/reset-password">{{$t('click_here')}}</router-link>
+        </div>
+      </div>
+    </b-jumbotron>
+  </b-container>
 </template>
 <i18n>
 {

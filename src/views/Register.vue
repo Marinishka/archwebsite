@@ -1,19 +1,21 @@
 <template>
-  <b-jumbotron class="shadow-sm">
-    <div>
-      <h3>{{ $t('login_header') }}</h3>
-      <b-form-input v-bind:placeholder="$t('email')" v-model="email"></b-form-input>
-      <b-form-input class="mt-2" v-bind:placeholder="$t('name')" v-model="name"></b-form-input>
-      <b-form-input class="mt-2" type="password" v-bind:placeholder="$t('password')" v-model="password"></b-form-input>
-      <b-form-input class="mt-2" type="password" v-bind:placeholder="$t('retype_password')" v-model="password2"></b-form-input>
-      <b-alert :show="error.state" variant="danger" class="mt-2">
+  <b-container class="mw-500">
+    <b-jumbotron class="shadow-sm">
+      <div>
+        <h3>{{ $t('login_header') }}</h3>
+        <b-form-input v-bind:placeholder="$t('email')" v-model="email"></b-form-input>
+        <b-form-input class="mt-2" v-bind:placeholder="$t('name')" v-model="name"></b-form-input>
+        <b-form-input class="mt-2" type="password" v-bind:placeholder="$t('password')" v-model="password"></b-form-input>
+        <b-form-input class="mt-2" type="password" v-bind:placeholder="$t('retype_password')" v-model="password2"></b-form-input>
+        <b-alert :show="error.state" variant="danger" class="mt-2">
         {{error.cause}}
-      </b-alert>      
-      <b-button block variant="primary mt-3" @click="register">{{ $t('register') }}</b-button>
-      <div class="mt-4 text-center">{{ $t('have_account') }} <router-link class="font-weight-bold" to="/login">{{ $t('login_btn') }}</router-link></div>
-      <div class="mt-4 text-center fs-075">{{ $t('forgot_password') }} <router-link to="/reset-password">{{ $t('click_here') }}</router-link></div>
-    </div>
-  </b-jumbotron>
+        </b-alert>      
+        <b-button block variant="primary mt-3" @click="register">{{ $t('register') }}</b-button>
+        <div class="mt-4 text-center">{{ $t('have_account') }} <router-link class="font-weight-bold" to="/login">{{ $t('login_btn') }}</router-link></div>
+        <div class="mt-4 text-center fs-075">{{ $t('forgot_password') }} <router-link to="/reset-password">{{ $t('click_here') }}</router-link></div>
+      </div>
+    </b-jumbotron>
+  </b-container>
 </template>
 <i18n>
 {

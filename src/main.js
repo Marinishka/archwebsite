@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import en from './lang/en.json'
+import ru from './lang/ru.json'
 import {
   BootstrapVue,
   IconsPlugin,
@@ -23,7 +25,10 @@ Vue.config.productionTip = false
 //});
 const i18n = new VueI18n({
   locale: location.href.search("/en/") >= 0 ? 'en' : 'ru',
-  messages: {}
+  messages: {
+    en, 
+    ru
+  }
 })
 
 new Vue({
