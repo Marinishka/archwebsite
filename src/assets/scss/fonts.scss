@@ -1,26 +1,35 @@
 @font-face {
   font-style: normal;
-  font-weight: 600;
-  font-family: "ProximaNovaRegular";
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
 
   font-display: swap;
-  src: url("assets/fonts/ProximaNova-Regular.woff2") format("woff2"), url("assets/fonts/ProximaNova-Regular.woff") format("woff");
+  src: url("assets/fonts/WorkSans-Regular.woff2") format("woff2"), url("assets/fonts/WorkSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+
+  font-display: swap;
+  src: url("assets/fonts/WorkSans-SemiBold.woff2") format("woff2"), url("assets/fonts/WorkSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 500;
-  font-family: "WorkSans";
+  font-family: "Work Sans", sans-serif;
 
   font-display: swap;
-  src: url("assets/fonts/WorkSans.woff2") format("woff2"), url("assets/fonts/WorkSans.woff") format("woff");
+  src: url("assets/fonts/WorkSans-Medium.woff2") format("woff2"), url("assets/fonts/WorkSans-Medium.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "ProximaNovaBold";
+  font-family: "Work Sans", sans-serif;
 
   font-display: swap;
-  src: url("assets/fonts/ProximaNova-Bold.woff2") format("woff2"), url("assets/fonts/ProximaNova-Bold.woff") format("woff");
+  src: url("assets/fonts/WorkSans-Bold.woff2") format("woff2"), url("assets/fonts/WorkSans-Bold.woff") format("woff");
 }

@@ -1,13 +1,59 @@
 <template>
-  <b-container class="mw-1180 toolkit">
+  <div class="in-container toolkit">
     <h1 class="visually-hidden">{{$t('toolkit.title-charter')}}</h1>
-    <h2 class="toolkit__title">{{$t('toolkit.title-section.mac')}}</h2>
+    <h2 v-if="operationSystem === 'mac'" class="toolkit__title">{{$t('toolkit.title-section.mac')}}</h2>
+    <h2 v-else class="toolkit__title">{{$t('toolkit.title-section.win')}}</h2>
     <p class="toolkit__text">{{$t('toolkit.text')}}</p>
     <img class="toolkit__img" width="684" height="496" src="./../assets/App-MAC.png" v-bind:alt="$t('toolkit.alt-img.mac')">
-    <b-link class="toolkit__link">{{$t('toolkit.btn-download')}}</b-link>
-    <b-link class="toolkit__link-to-other-version">{{$t('toolkit.link-to-other-app.mac')}}</b-link>
-  </b-container>
+    <b-link v-bind:href="linkApp" class="toolkit__link">{{$t('toolkit.btn-download')}}</b-link>
+    <b-link v-if="operationSystem === 'mac'" v-bind:href="linkForOtherSystem" class="toolkit__link-to-other-version">{{$t('toolkit.link-to-other-app.mac')}}</b-link>
+    <b-link v-else v-bind:href="linkForOtherSystem" class="toolkit__link-to-other-version">{{$t('toolkit.link-to-other-app.win')}}</b-link>
+  </div>
 </template>
+
+<script>
+import {LinkApp} from './../const'
+export default {
+  computed: {
+    linkApp: function() {
+      const operationSystem = navigator.platform;
+      let link = "";
+      if (operationSystem === "Win32" || operationSystem === "Win64") {
+        link = LinkApp.WIN;
+      } else if (operationSystem === "darwin") {
+        link = LinkApp.MAC;
+      } else {
+        link = LinkApp.WIN;
+      }
+      return link;
+    },
+    linkForOtherSystem: function() {
+      const operationSystem = navigator.platform;
+      let link = "";
+      if (operationSystem === "Win32" || operationSystem === "Win64") {
+        link = LinkApp.MAC;
+      } else if (operationSystem === "darwin") {
+        link = LinkApp.WIN;
+      } else {
+        link = LinkApp.MAC;
+      }
+      return link;
+    },
+    operationSystem: function() {
+      const operationSystem = navigator.platform;
+      let opSys = ''
+      if (operationSystem === "Win32" || operationSystem === "Win64") {
+        opSys = "win";
+      } else if (operationSystem === "darwin") {
+        opSys = "mac"
+      } else {
+        opSys = "win";
+      }
+      return opSys;
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 .toolkit {
@@ -18,6 +64,9 @@
 }
 
 .toolkit__img {
+  width: 100%;
+  max-width: 684px;
+  height: auto;
   margin-bottom: 20px;
 }
 
@@ -26,7 +75,8 @@
 
   font-size: 36px !important;
   line-height: 44px !important;
-  font-family: $font-ProximaNovaBold;
+
+@extend .font-title;
 }
 
 .toolkit__text {
@@ -44,20 +94,22 @@
   font-weight: 700;
   font-size: 18px !important;
   line-height: 22px !important;
-  font-family: $font-WorkSans;
   color: $white !important;
 
   background-color: $bg-block !important;
   border-radius: 15px !important;
   box-shadow: 0 10px 20px rgba(90, 181, 186, 0.18), 0 2px 6px rgba(90, 181, 186, 0.12), 0 0 1px rgba(0, 0, 0, 0.04);
+
+@extend .font-link-btn-1;
 }
 
 .toolkit__link-to-other-version {
   font-size: 14px !important;
   line-height: 17px;
-  font-family: $font-ProximaNovaRegular;
   color: $secondary-dark !important;
   text-decoration: underline !important;
+
+@extend .font-main;
 }
 
 </style>

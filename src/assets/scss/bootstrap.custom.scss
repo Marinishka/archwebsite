@@ -37,7 +37,7 @@
     background-color: #2f36dc !important;
   }
 
-  p:not(.toolkit__text):not(.footer__copyright),
+  p:not(.toolkit__text):not(.footer__copyright):not(.footer-nav__social-network-name):not(.btn__inner),
   span,
   h1,
   h2:not(.applying__title),
@@ -51,7 +51,7 @@
     color: #323232 !important;
   }
 
-  a.router-link-active:not(.sign-in-link) {
+  a.router-link-active:not(.sign-in-link):not(.header-nav-list__link) {
     color: #ffffff !important;
   }
 

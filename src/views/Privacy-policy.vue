@@ -1,55 +1,55 @@
 <template>
-  <b-container class="mw-1180 privacy-policy">
-    <h1 class="privacy-policy__title">Privacy Policy</h1>
-    <p class="privacy-policy__text">ARchiteque LLC built the ARchiteque app as a Commercial app. This SERVICE is provided by ARchiteque LLC and is intended for use as is. This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service. If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy. The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at ARchiteque unless otherwise defined in this Privacy Policy.</p>
+  <div class="in-container privacy-policy">
+    <h1 class="privacy-policy__title">{{$t('privacy-policy.title')}}</h1>
+      <p class="privacy-policy__text">{{$t('privacy-policy.text')}}</p>
     <section class="privacy-policy__section">
-      <h2 class="privacy-policy__section-title">Information Collection and Use</h2>
-      <p class="privacy-policy__text">For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy. The app does use third party services that may collect information used to identify you. Link to privacy policy of third party service providers used by the app.</p>
+      <h2 class="privacy-policy__section-title">{{$t('privacy-policy.first.title')}}</h2>
+      <p class="privacy-policy__text">{{$t('privacy-policy.first.text')}}</p>
     </section>
     <section class="privacy-policy__section">
-      <h2 class="privacy-policy__section-title">Log Data</h2>
-      <p class="privacy-policy__text">We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
+      <h2 class="privacy-policy__section-title">{{$t('privacy-policy.second.title')}}</h2>
+      <p class="privacy-policy__text">{{$t('privacy-policy.second.text')}}</p>
     </section>
     <section class="privacy-policy__section">
-      <h2 class="privacy-policy__section-title">Cookies</h2>
-      <p class="privacy-policy__text">Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory. This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</p>
+      <h2 class="privacy-policy__section-title">{{$t('privacy-policy.third.title')}}</h2>
+      <p class="privacy-policy__text">{{$t('privacy-policy.third.text')}}</p>
     </section>
     <section class="privacy-policy__section">
-      <h2 class="privacy-policy__section-title">Service Providers</h2>
+      <h2 class="privacy-policy__section-title">{{$t('privacy-policy.fourth.title')}}</h2>
       <p class="privacy-policy__text">
-        We may employ third-party companies and individuals due to the following reasons:
+        {{$t('privacy-policy.fourth.text-before')}}
       </p>
         <ul class="privacy-policy__list">
-          <li class="privacy-policy__item">To facilitate our Service;</li>
-          <li class="privacy-policy__item">To provide the Service on our behalf;</li>
-          <li class="privacy-policy__item">To perform Service-related services; or</li>
-          <li class="privacy-policy__item">To assist us in analyzing how our Service is used.</li>
+          <li class="privacy-policy__item">{{$t('privacy-policy.fourth.list.first')}}</li>
+          <li class="privacy-policy__item">{{$t('privacy-policy.fourth.list.second')}}</li>
+          <li class="privacy-policy__item">{{$t('privacy-policy.fourth.list.third')}}</li>
+          <li class="privacy-policy__item">{{$t('privacy-policy.fourth.list.fourth')}}</li>
         </ul>
         <p class="privacy-policy__text">
-        We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+        {{$t('privacy-policy.fourth.text-after')}}</p>
     </section>
     <section class="privacy-policy__section">
-      <h2 class="privacy-policy__section-title">Security</h2>
-      <p class="privacy-policy__text">We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+      <h2 class="privacy-policy__section-title">{{$t('privacy-policy.fifth.title')}}</h2>
+      <p class="privacy-policy__text">{{$t('privacy-policy.fifth.text')}}</p>
     </section>
     <section class="privacy-policy__section">
-      <h2 class="privacy-policy__section-title">Links to Other Sites</h2>
-      <p class="privacy-policy__text">This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+      <h2 class="privacy-policy__section-title">{{$t('privacy-policy.sixth.title')}}</h2>
+      <p class="privacy-policy__text">{{$t('privacy-policy.sixth.text')}}</p>
     </section>
     <section class="privacy-policy__section">
-      <h2 class="privacy-policy__section-title">Children’s Privacy</h2>
-      <p class="privacy-policy__text">These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
+      <h2 class="privacy-policy__section-title">{{$t('privacy-policy.seventh.title')}}</h2>
+      <p class="privacy-policy__text">{{$t('privacy-policy.seventh.text')}}</p>
     </section>
     <section class="privacy-policy__section">
-      <h2 class="privacy-policy__section-title">Changes to This Privacy Policy</h2>
-      <p class="privacy-policy__text">We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
+      <h2 class="privacy-policy__section-title">{{$t('privacy-policy.eighth.title')}}</h2>
+      <p class="privacy-policy__text">{{$t('privacy-policy.eighth.text')}}</p>
     </section>
     <section class="privacy-policy__section">
-      <h2 class="privacy-policy__section-title">Contact Us</h2>
-      <p class="privacy-policy__text">If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+      <h2 class="privacy-policy__section-title">{{$t('privacy-policy.ninth.title')}}</h2>
+      <p class="privacy-policy__text">{{$t('privacy-policy.ninth.text')}}</p>
       <p class="terms-of-use__text"><a href="mailto:Info@ar-chiteque.com">Info@ar-chiteque.com</a></p>
     </section>
-  </b-container>
+  </div>
 </template>
 
 <style lang="scss">
@@ -58,31 +58,28 @@
   padding-bottom: 140px;
 }
 .privacy-policy__title {
-  font-size: 48px !important;
-  line-height: 58px !important;
-  font-family: $font-ProximaNovaBold;
+  @extend .support-title-charter;
 }
 
 .privacy-policy__section-title {
-  font-size: 24px !important;
-  line-height: 29px !important;
-  font-family: $font-ProximaNovaBold;
+  @extend .support-title-section;
 }
 
 .privacy-policy__text {
-  font-size: 18px;
-  line-height: 1.5;
-  font-family: $font-ProximaNovaRegular;
-  text-align: justify;
+  @extend .support-title-text;
 }
 
 .privacy-policy__list {
-  padding-left: 27px;
+  padding: 0;
 
   list-style-type: none;
   font-size: 18px;
   line-height: 1.5;
-  font-family: $font-ProximaNovaRegular;
+
+@extend .font-main;
+  @media (min-width: $tablet-width) {
+    padding-left: 27px;
+  }
 }
 
 .privacy-policy__item::before {

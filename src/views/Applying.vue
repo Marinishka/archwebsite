@@ -1,6 +1,6 @@
 <template>
   <div class="applying-bg">
-    <div class="mw-1180 applying">
+    <div class="in-container applying">
       <h2 class="applying__title">{{$t('applying.title')}}</h2>
       <dl class="applying__list applying-list">
         <div class="applying-list__wrapper">
@@ -28,7 +28,11 @@
 
 .applying-list {
   display: flex;
+  flex-direction: column;
   margin-bottom: 0 !important;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .applying-bg {
@@ -36,18 +40,21 @@
 }
 
 .applying-list__title {
-  margin-bottom: 23px !important;
-
-@extend .title-section;
+  @extend .title-section;
 }
 
 .applying-list__text {
   margin: 0 !important;
 
-  font-size: 14px;
-  line-height: 17px;
-  font-family: $font-ProximaNovaRegular;
+  font-size: 12px;
+  line-height: 1.2;
   color: black;
+
+@extend .font-main;
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .applying__title {
@@ -58,6 +65,16 @@
 
 .applying-list__wrapper {
   position: relative;
+
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: $tablet-width) {
+    margin-right: none;
+    margin-left: none;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .applying-list__wrapper::before {
@@ -75,29 +92,48 @@
 }
 
 .applying-list__wrapper:not(:last-child) {
-  margin-right: 70px;
+  margin-bottom: 30px;
+  @media (min-width: $tablet-width) {
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .applying-list__item {
   position: relative;
 
-  width: 544px;
-  min-height: 340px;
-  padding: 145px 40px 50px 50px;
+  height: 100%;
+  padding: 90px 30px 30px 40px;
 
   background-color: $white;
   border-radius: 8px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 545px;
+    padding: 145px 40px 50px 50px;
+  }
 }
 
 .applying-list__item::after {
   content: "";
   position: absolute;
-  top: 43px;
-  left: 50px;
+  top: 23px;
+  left: 40px;
 
   display: block;
-  width: 103px;
-  height: 85px;
+  width: 75px;
+  height: 55px;
+
+  @media (min-width: $tablet-width) {
+    top: 43px;
+    left: 50px;
+
+    width: 103px;
+    height: 85px;
+
+    background-size: 66px 66px,
+    85px 85px;
+  }
 }
 
 .applying-list__item--marketing::after {
@@ -105,8 +141,13 @@
   radial-gradient(circle, $decor2 70%, transparent 70%) no-repeat;
   background-position: left 50%,
   top left 17px;
-  background-size: 66px 66px,
-  85px 85px;
+  background-size: 46px 46px,
+  55px 55px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 66px 66px,
+    85px 85px;
+  }
 }
 
 .applying-list__item--commerce::after {
@@ -114,8 +155,12 @@
   radial-gradient(circle, $decor2 70%, transparent 70%) no-repeat;
   background-position: left 50%,
   top left 17px;
-  background-size: 66px 66px,
-  85px 85px;
+  background-size: 46px 46px,
+  55px 55px;
+  @media (min-width: $tablet-width) {
+    background-size: 66px 66px,
+    85px 85px;
+  }
 }
 
 

@@ -6,8 +6,7 @@ $bg-dark: #282828;
 $white: #ffffff;
 $light-gray: #e5e5e5;
 $font-ProximaNovaRegular: "ProximaNovaRegular", sans-serif;
-$font-ProximaNovaBold: "ProximaNovaBold", sans-serif;
-$font-WorkSans: "WorkSans", sans-serif;
+$font-WorkSans: "Work Sans";
 $highlighter: #aff0f3;
 $bg-block: #5ab5ba;
 $decor: #c5d5e8;
@@ -15,11 +14,37 @@ $decor2: #f6f5f7;
 $bg-block2: #f5f8ff;
 $halfhidden: #818385;
 $stroke: #cfcfcf;
+$bg-language: #e3e7f0;
+$tablet-width: 768px;
+$desktop-width: 1250px;
+$mobile-width-only: 767px;
+$font-main: $font-WorkSans;
+
+.font-main {
+  font-weight: 400;
+  font-family: $font-main, "Arial", sans-serif;
+}
+
+.font-title {
+  font-weight: 700 !important;
+  font-family: $font-main, "Arial", sans-serif;
+}
+
+.font-link-btn-1 {
+  font-weight: 500 !important;
+  font-family: $font-main, "Arial", sans-serif;
+}
+
+.font-link-btn-2 {
+  font-weight: 600;
+  font-family: $font-main, "Arial", sans-serif !important;
+}
 
 .text {
   font-size: 18px;
   line-height: 22px;
-  font-family: $font-ProximaNovaRegular;
+
+@extend .font-main;
 }
 
 .button {
@@ -46,20 +71,69 @@ $stroke: #cfcfcf;
 }
 
 .title-chapter {
-  margin-bottom: 70px !important;
+  margin-bottom: 35px !important;
 
-  font-size: 48px !important;
-  line-height: 58px !important;
-  font-family: $font-ProximaNovaBold;
+  font-size: 24px;
+  line-height: 1.2;
   text-align: center;
+
+@extend .font-title;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px !important;
+
+    font-size: 48px !important;
+    line-height: 58px !important;
+  }
 }
 
 .title-section {
   margin-bottom: 23px;
 
+  font-size: 18px;
+  line-height: 1.2;
+
+@extend .font-title;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px !important;
+    line-height: 29px !important;
+  }
+}
+
+.support-title-charter {
   font-size: 24px !important;
-  line-height: 29px !important;
-  font-family: $font-ProximaNovaBold;
+  line-height: 1.1 !important;
+
+@extend .font-title;
+
+  @media (min-width: $tablet-width) {
+    font-size: 48px !important;
+    line-height: 58px !important;
+  }
+}
+
+.support-title-section {
+  font-size: 22px !important;
+  line-height: 1.1 !important;
+
+@extend .font-title;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px !important;
+    line-height: 29px !important;
+  }
+}
+
+.support-title-text {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: $font-ProximaNovaRegular;
+  text-align: justify;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px !important;
+  }
 }
 
 .highlighted {
@@ -76,10 +150,17 @@ $stroke: #cfcfcf;
   clip: rect(0 0 0 0);
 }
 
-.mw-1180 {
-  max-width: 1180px;
+.in-container {
+  min-width: 320px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  @media (min-width: $desktop-width) {
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }

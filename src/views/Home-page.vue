@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="home-page__bg"></div>
-    <h1 class="visually-hidden">Сайт Architeque - приложения дополненной реальности</h1>
+    <h1 class="visually-hidden">{{$t('title')}}</h1>
     <Promo></Promo>
     <Applying></Applying>
     <Development></Development>

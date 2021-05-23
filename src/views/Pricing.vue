@@ -2,7 +2,7 @@
   <b-container class="catalog">
     <div class="catalog__bg"></div>
     <h1 class="visually-hidden">{{$t('pricing.title-charter')}}</h1>
-    <b-container class="mw-1180">
+    <div>
       <h2 class="catalog__title">{{$t('pricing.title-section')}}</h2>
       <ul class="catalog__list catalog-list">
         <li class="catalog-list__item catalog-item">
@@ -34,7 +34,7 @@
           </dl>
           <b-link :to="{name: 'Subscriptions'}" class="catalog__btn btn">{{$t('pricing.link-to-subscriptions')}}</b-link>
         </li>
-        <div class="catalog-list__item catalog-item-wrapper--popular">
+        <div class="catalog-list__item catalog-item catalog-item-wrapper--popular">
           <li class="catalog-item--popular">
             <h3 class="catalog-item__title">{{$t('pricing.pricing-list.second.title')}}</h3>
             <div class="catalog-item__price">
@@ -92,7 +92,7 @@
           <b-link :to="{name: 'Subscriptions'}" class="catalog__btn btn">{{$t('pricing.link-to-subscriptions')}}</b-link>
         </li>
       </ul>
-    </b-container>
+    </div>
   </b-container>
 </template>
 
@@ -111,12 +111,20 @@ export default {
 }
 
 .catalog-list {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  grid-gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(auto-fit, 320px);
+  }
 }
 
 .catalog-item__price {
@@ -144,16 +152,27 @@ export default {
 }
 
 .catalog-item {
-  width: 320px;
-  min-height: 497px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 250px;
+  max-width: 320px;
+  min-height: 400px;
   padding: 29px 31px 43px 31px;
 
   background-color: $white;
   border-radius: 20px;
   box-shadow: 0 16px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04), 0 0 1px rgba(0, 0, 0, 0.04);
+  @media (min-width: $tablet-width) {
+    width: 320px;
+    height: 100%;
+  }
 }
 
 .catalog-item--popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   padding: 29px 31px 43px 31px;
@@ -163,13 +182,17 @@ export default {
 }
 
 .catalog-item-wrapper--popular {
-  width: 320px;
+  min-width: 250px;
+  max-width: 320px;
   min-height: 497px;
   padding: 4px;
 
   background: conic-gradient(#1f28ff, #28ea99, #12c4fc, #ff5675, #1f28ff);
   border-radius: 20px;
   box-shadow: 0 16px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04), 0 0 1px rgba(0, 0, 0, 0.04);
+  @media (min-width: $tablet-width) {
+    width: 320px;
+  }
 }
 
 .catalog-item__amount {
@@ -177,7 +200,8 @@ export default {
 
   font-size: 48px;
   line-height: 58px;
-  font-family: $font-ProximaNovaBold;
+
+@extend .font-title;
 }
 
 .catalog-item__interval {
@@ -201,7 +225,8 @@ export default {
 
   font-size: 18px;
   line-height: 22px;
-  font-family: $font-ProximaNovaBold;
+
+@extend .font-title;
 }
 
 .catalog-item__features-list {
@@ -241,7 +266,7 @@ export default {
   padding-top: 18px !important;
   padding-bottom: 18px !important;
 
-  font-family: $font-ProximaNovaRegular;
+@extend .font-main;
 
 @extend .button;
 }

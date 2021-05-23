@@ -1,17 +1,17 @@
 <template>
   <footer class="footer-bg">
-    <b-container class="mw-1180">
+    <div class="in-container">
       <b-row class="footer">
-        <b-col>
+        <b-col class="footer__col">
           <b-link :to="{name: 'Home'}" v-if="$route.path !== '/'">
-          <img class="footer__logo" src="./../assets/architeque_inverse.png"
-          width="90" height="75" v-bind:alt="$t('alt-logo')">
-        </b-link>
-        <img v-else class="footer__logo" src="./../assets/architeque_inverse.png"
-          width="90" height="75" v-bind:alt="$t('alt-logo')">
+            <img class="footer__logo" src="./../assets/architeque_inverse.png"
+          width="82" height="75" v-bind:alt="$t('alt-logo')">
+          </b-link>
+          <img v-else class="footer__logo" src="./../assets/architeque_inverse.png"
+          width="82" height="75" v-bind:alt="$t('alt-logo')">
           <p class="footer__copyright">{{$t('footer.copyright')}}</p>
         </b-col>
-        <b-col>
+        <b-col class="footer__col">
           <dl class="footer-nav">
             <dt class="footer-nav__title">
               {{$t('footer.nav-col.first.title')}}
@@ -33,7 +33,7 @@
             </dd>
           </dl>
         </b-col>
-        <b-col>
+        <b-col class="footer__col">
           <dl class="footer-nav">
             <dt class="footer-nav__title">
               {{$t('footer.nav-col.second.title')}}
@@ -50,7 +50,7 @@
             </dd>
           </dl>
         </b-col>
-        <b-col>
+        <b-col class="footer__col">
           <dl class="footer-nav">
             <dt class="footer-nav__title">
               {{$t('footer.nav-col.third.title')}}
@@ -72,33 +72,33 @@
             </dd>
           </dl>
         </b-col>
-        <b-col>
-           <dl class="footer-nav">
+        <b-col class="footer__col">
+           <dl class="footer-nav footer-nav--socials">
             <dt class="footer-nav__title">
               {{$t('footer.nav-col.fourth.title')}}
             </dt>
             <dd class="footer-nav__item">
               <b-link class="footer-nav__link" href="https://www.facebook.com/ARchitequeApp/">
                 <IconFacebook class="footer-nav__icon"></IconFacebook>
-                {{$t('footer.nav-col.fourth.link-list.first')}}
+                <p class="footer-nav__social-network-name">{{$t('footer.nav-col.fourth.link-list.first')}}</p>
               </b-link>
             </dd>
             <dd class="footer-nav__item">
               <b-link class="footer-nav__link" href="https://www.instagram.com/ar_chiteque/">
                 <IconInstagram class="footer-nav__icon"></IconInstagram>
-                {{$t('footer.nav-col.fourth.link-list.second')}}
+                <p class="footer-nav__social-network-name">{{$t('footer.nav-col.fourth.link-list.second')}}</p>
               </b-link>
             </dd>
             <dd class="footer-nav__item">
               <b-link class="footer-nav__link" href="https://twitter.com/architeque1">
                 <IconTwitter class="footer-nav__icon"></IconTwitter>
-                {{$t('footer.nav-col.fourth.link-list.third')}}
+                <p class="footer-nav__social-network-name">{{$t('footer.nav-col.fourth.link-list.third')}}</p>
               </b-link>
             </dd>
           </dl>
         </b-col>
       </b-row>
-    </b-container>
+    </div>
   </footer>
 </template>
 
@@ -111,13 +111,29 @@ export default {
     IconFacebook,
     IconInstagram,
     IconTwitter
-  } 
+  }
 }
 </script>
 
 <style lang="scss">
 .row {
   margin: 0 !important;
+}
+
+.footer {
+  flex-direction: column;
+  padding-top: 70px;
+  padding-bottom: 90px;
+
+  text-align: center;
+
+@extend .font-main;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+
+    text-align: left;
+  }
 }
 
 .footer__logo {
@@ -129,14 +145,26 @@ export default {
 }
 
 .footer-nav__icon {
-  margin-right: 8px;
+  width: 50px;
+  height: 50px;
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+  }
 }
 
-.footer {
-  padding-top: 70px;
-  padding-bottom: 90px;
+.footer-nav__social-network-name {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: inline;
 
-  font-family: $font-ProximaNovaRegular;
+    color: $light-gray !important;
+  }
+}
+
+.footer__col:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .footer-nav__title {
@@ -156,8 +184,33 @@ export default {
   margin-bottom: 20px !important;
 }
 
-.footer-nav__item:last-child {
-  margin-bottom: 0 !important;
+.footer-nav--socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+  }
+}
+
+.footer-nav--socials .footer-nav__title {
+  width: 100%;
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.footer-nav--socials .footer-nav__item:not(:last-child) {
+  margin-right: 20px;
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.footer-nav--socials .footer-nav__link {
+  display: inline-block;
 }
 
 .footer-bg {
