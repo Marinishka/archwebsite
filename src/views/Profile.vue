@@ -50,6 +50,7 @@ export default {
     }
   },
   created() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["profile"];
     let _this = this;
     this.axios.get(process.env.VUE_APP_API_BASEURL + "/api/v1/user/security", {headers: {
       "Authorization": "Bearer " + this.$store.state.token
@@ -61,7 +62,9 @@ export default {
       _this.dismissErrorMessageCountDown = 5;
       _this.errorMessage = error.response.data.cause;
     });
-
+  },
+  updated() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["profile"];
   },
   methods: {
     required(value) {

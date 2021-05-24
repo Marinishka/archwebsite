@@ -131,6 +131,7 @@ $font-main: $font-Nunito;
   text-align: justify;
 
 @extend .font-title;
+
   @media (min-width: $tablet-width) {
     font-size: 18px !important;
   }
@@ -146,6 +147,8 @@ $font-main: $font-Nunito;
   width: 1px;
   height: 1px;
   margin: -1px;
+
+  word-wrap: break-word;
 
   clip: rect(0 0 0 0);
 }

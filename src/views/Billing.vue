@@ -44,6 +44,7 @@
       }
     },
     created(){
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["billing"];
       let _this = this;
       this.axios.post(process.env.VUE_APP_API_BASEURL + "/api/v1/billing/subscription/invoices", {}, {headers: {
         "Authorization": "Bearer " + this.$store.state.token
@@ -68,6 +69,9 @@
         console.log("error",error);
       });      
       // https://dev.ar0.app:7700/api/v1/billing/subscription/invoices
+    },
+    updated() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["billing"];
     }
   }
 </script>

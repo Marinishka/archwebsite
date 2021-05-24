@@ -32,6 +32,12 @@ export default {
       }
     }
   },
+  created() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["reset-password"];
+  },
+  updated() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["reset-password"];
+  },
   methods: {
     sendPassword: function(){
         let _this = this;

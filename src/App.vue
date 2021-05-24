@@ -10,6 +10,14 @@ export default {
   components: {
     DefaultLayout
   },
+  watch: {
+  '$store.lang': {
+    immediate: true,
+    handler() {
+      document.documentElement.setAttribute('lang', this.$root.$i18n.locale);
+    },
+  },
+}
 }
 </script>
 <style lang="scss">
@@ -17,4 +25,5 @@ export default {
 @import "./assets/scss/fonts.scss";
 @import "./assets/scss/bootstrap.custom.scss";
 @import "./assets/scss/styles.scss";
+
 </style> 

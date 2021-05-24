@@ -41,6 +41,12 @@ export default {
   mounted(){
 
   },
+  created() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["register"];
+  },
+  updated() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["register"];
+  },
   methods: {
     register() {
       if(this.password !== this.password2) {

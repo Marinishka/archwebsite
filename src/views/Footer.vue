@@ -22,7 +22,7 @@
               </b-link>
             </dd>
             <dd class="footer-nav__item">
-              <b-link :to="'/'" class="footer-nav__link">
+              <b-link :href="hrefApp" class="footer-nav__link">
                 {{$t('footer.nav-col.first.link-list.second')}}
               </b-link>
             </dd>
@@ -111,6 +111,26 @@ export default {
     IconFacebook,
     IconInstagram,
     IconTwitter
+  },
+  computed: {
+    hrefApp: function() {
+      let os = "";
+  
+       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(userAgent)) {
+        os = "Android";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        os = "iOS";
+      } else {
+        os = "unknown";
+      }
+      
+      if (os === "Android") {
+        return "https://play.google.com/store/apps/details?id=com.architeque.android.app"; 
+      } else {
+        return "https://itunes.apple.com/app/apple-store/id1447699048";
+      }
+    }
   }
 }
 </script>

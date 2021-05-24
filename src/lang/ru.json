@@ -308,5 +308,20 @@
     "cancel-subscription": "Отменить подписку",
     "remain-active-until": "Подписка останется активной до",
     "upgrade": "Обновить"
+  },
+  "titles": {
+    "home": "Architeque - приложение дополненной реальности",
+    "toolkit": "Инструменты - Architeque",
+    "pricing": "Тарифы - Architeque",
+    "login": "Войти в личный кабинет - Architeque",
+    "not-found": "Страница не найдена - Architeque",
+    "terms-of-use": "Условия и положения - Architeque",
+    "privacy-policy": "Политика конфиденциальности - Architeque",
+    "register": "Зарегистрироваться - Architeque",
+    "reset-password":"Восстановить пароль - Architeque",
+    "profile": "Профиль - Architeque",
+    "checkout-status": "Проверка статуса оформления заказа - Architeque",
+    "subscriptions": "Подписки - Architeque",
+    "billing": "Счета - Architeque"
   }
 }

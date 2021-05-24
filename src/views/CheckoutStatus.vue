@@ -25,10 +25,14 @@ export default {
     }
   },
   created() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["checkout-status"];
     console.log("this.$route.query",this.$route.query)
     //let _this = this;
     this.checkStatus();
     
+  },
+  updated() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["checkout-status"];
   },
   methods: {
     getAlertVariant() {

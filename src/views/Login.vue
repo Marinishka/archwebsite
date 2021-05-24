@@ -38,8 +38,12 @@ export default {
     }
   },
   created(){
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["login"];
     console.log(this.$i18n)
     //this.$i18n.locale = 'ru';
+  },
+  updated() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["login"];
   },
   mounted(){
     console.log("this.$route",this.$route.query, this.$route.query.message);

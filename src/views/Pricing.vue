@@ -101,7 +101,13 @@ import IconChecked2 from '../assets/icons/IconChecked2.vue'
 export default {
   components: {
     IconChecked2
-  }
+  },
+    created() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["pricing"];
+    },
+    updated() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["pricing"];
+    }
 }
 </script>
 

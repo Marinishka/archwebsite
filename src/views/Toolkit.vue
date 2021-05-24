@@ -16,11 +16,10 @@ import {LinkApp} from './../const'
 export default {
   computed: {
     linkApp: function() {
-      const operationSystem = navigator.platform;
+      const platform = require('platform');
+      const os = platform.os.family;
       let link = "";
-      if (operationSystem === "Win32" || operationSystem === "Win64") {
-        link = LinkApp.WIN;
-      } else if (operationSystem === "darwin") {
+      if (os.includes('OS') || os.includes('Mac')) {
         link = LinkApp.MAC;
       } else {
         link = LinkApp.WIN;
@@ -28,30 +27,32 @@ export default {
       return link;
     },
     linkForOtherSystem: function() {
-      const operationSystem = navigator.platform;
+      const platform = require('platform');
+      const os = platform.os.family;
       let link = "";
-      if (operationSystem === "Win32" || operationSystem === "Win64") {
+      if (os.includes('OS') || os.includes('Mac')) {
         link = LinkApp.MAC;
-      } else if (operationSystem === "darwin") {
-        link = LinkApp.WIN;
       } else {
-        link = LinkApp.MAC;
-      }
+        link = LinkApp.WIN;
+      } 
       return link;
     },
     operationSystem: function() {
-      const operationSystem = navigator.platform;
-      let opSys = ''
-      if (operationSystem === "Win32" || operationSystem === "Win64") {
-        opSys = "win";
-      } else if (operationSystem === "darwin") {
-        opSys = "mac"
+      const platform = require('platform');
+      const os = platform.os.family;
+      if (os.includes('OS') || os.includes('Mac')) {
+        return "mac";
       } else {
-        opSys = "win";
+        return "win";
       }
-      return opSys;
     }
-  }
+  },
+    created() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["toolkit"];
+    },
+    updated() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["toolkit"];
+    }
 }
 </script>
 

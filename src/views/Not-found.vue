@@ -5,6 +5,17 @@
   </b-container>
 </template>
 
+<script>
+export default {
+    created() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["not-found"];
+    },
+    updated() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["not-found"];
+    }
+}
+</script>
+
 <style lang="scss">
 
 .not-found {

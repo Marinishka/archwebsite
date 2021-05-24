@@ -45,6 +45,6 @@
       let stripeScript = document.createElement('script')
       stripeScript.setAttribute('src', 'https://js.stripe.com/v3/')
       document.head.appendChild(stripeScript)
-    },
+    }
   }
 </script>

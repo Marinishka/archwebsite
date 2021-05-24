@@ -8,8 +8,10 @@
         <li class="promo-list__item">{{$t('promo.list.third')}}</li>
       </ul>
       <img class="promo__img" src="./../assets/Freedom-lady.png" width="648" height="648" v-bind:alt="$t('promo.alt-img')">
-      <a href="https://apps.apple.com/app/id1447699048" class="promo__btn--ios promo__btn">{{$t('link-to-app-store')}}</a>
-      <a href="https://play.google.com/store/apps/details?id=com.architeque.android.app" class="promo__btn--android promo__btn">{{$t('link-to-google-play')}}</a>
+      <div class="promo__btn-container">
+        <a href="https://apps.apple.com/app/id1447699048" class="promo__btn--ios promo__btn">{{$t('link-to-app-store')}}</a>
+        <a href="https://play.google.com/store/apps/details?id=com.architeque.android.app" class="promo__btn--android promo__btn">{{$t('link-to-google-play')}}</a>
+      </div>
     </section>
   </div>
 </template>
@@ -46,6 +48,13 @@ export default {
 
     font-size: 64px !important;
   }
+}
+
+.promo__btn-container {
+  display: grid;
+
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 135px));
 }
 
 .promo__btn {
@@ -101,8 +110,6 @@ export default {
 }
 
 .promo__btn--ios {
-  margin-right: 20px;
-
   color: $white !important;
 
   background-color: $bg-dark !important;

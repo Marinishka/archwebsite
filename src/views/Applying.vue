@@ -51,6 +51,7 @@
   color: black;
 
 @extend .font-main;
+
   @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 17px;
@@ -102,7 +103,7 @@
 .applying-list__item {
   position: relative;
 
-  height: 100%;
+  height: auto;
   padding: 90px 30px 30px 40px;
 
   background-color: $white;
@@ -110,6 +111,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 545px;
+    height: 100%;
     padding: 145px 40px 50px 50px;
   }
 }

@@ -60,6 +60,7 @@ export default {
     onLangChangeBtn: function({target}) {
       if (this.$root.$i18n.locale !== target.value) {
         this.$root.$i18n.locale = target.value;
+        document.documentElement.setAttribute('lang', this.$root.$i18n.locale);
       }
       this.isLangSelectVisible = false;
     },
@@ -135,9 +136,11 @@ export default {
 .header__toggle {
   position: absolute;
   top: -35px;
-  right: -20px;
+  right: -10px;
 
-  width: 40px;
+  width: 30px;
+  padding: 0;
+  display: block;
 
   background-color: transparent;
   border: none;
@@ -153,6 +156,7 @@ export default {
   content: "";
 
   display: block;
+  width: 100%;
   height: 4px;
   margin: 4px 0;
 

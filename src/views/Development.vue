@@ -14,7 +14,7 @@
               <li class="development-item-features__item">{{$t('development.list.first.features.second')}}</li>
               <li class="development-item-features__item">{{$t('development.list.first.features.third')}}</li>
             </ul>
-            <b-link class="development__btn btn" v-bind:to="hrefApp">{{$t('btn-download')}}</b-link>
+            <b-link class="development__btn btn" v-bind:href="hrefApp">{{$t('btn-download')}}</b-link>
           </div>
         </li>
         <li class="development-list__item development-item">
@@ -39,27 +39,25 @@
 <script>
 export default {
   computed: {
-  hrefApp: function() {
-    let os = "";
-
-     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/android/i.test(userAgent)) {
-      os = "Android";
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      os = "iOS";
-    } else {
-      os = "unknown"
-    } 
-    
-    if (os === "Android") {
-      console.log("android");
-      return "https://play.google.com/store/apps/details?id=com.architeque.android.app"; 
-    } else {
-      console.log("ios");
-      return "https://itunes.apple.com/app/apple-store/id1447699048";
+    hrefApp: function() {
+      let os = "";
+  
+       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(userAgent)) {
+        os = "Android";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        os = "iOS";
+      } else {
+        os = "unknown";
+      }
+      
+      if (os === "Android") {
+        return "https://play.google.com/store/apps/details?id=com.architeque.android.app"; 
+      } else {
+        return "https://itunes.apple.com/app/apple-store/id1447699048";
+      }
     }
   }
-}
 }
 </script>
 
@@ -80,7 +78,10 @@ export default {
 }
 
 .development-item:not(:last-child) {
-  margin-bottom: 35px;
+  margin-bottom: 80px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
 }
 
 .development-item__img {

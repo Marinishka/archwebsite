@@ -52,6 +52,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  created() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["privacy-policy"];
+  },
+  updated() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["privacy-policy"];
+  }
+}
+</script>
+
 <style lang="scss">
 
 .privacy-policy {

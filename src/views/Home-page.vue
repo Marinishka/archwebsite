@@ -24,6 +24,12 @@ import Invitation from "../views/Invitation.vue"
       Development,
       Price,
       Invitation
+    },
+    created() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["home"];
+    },
+    updated() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["home"];
     }
   }
 </script>

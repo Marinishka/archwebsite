@@ -65,6 +65,10 @@ export default {
   created() {
     this.getCurrentSubscription();
     this.getAllSubscription();
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["subscriptions"];
+  },
+  updated(){
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["subscriptions"];
   },
   methods: {
     moment: moment,

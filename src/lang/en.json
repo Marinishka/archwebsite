@@ -308,5 +308,20 @@
     "cancel-subscription": "Cancel subscription",
     "remain-active_until": "It will remain active until",
     "upgrade": "Upgrade"
+  },
+  "titles": {
+    "home": "Architeque - augmented reality app",
+    "toolkit": "Toolkit - Architeque",
+    "pricing": "Pricing - Architeque",
+    "login": "Login - Architeque",
+    "not-found": "Page not found - Architeque",
+    "terms-of-use": "Terms of use - Architeque",
+    "privacy-policy": "Privacy policy - Architeque",
+    "register": "Registration - Architeque",
+    "reset-password": "Reset password - Architeque",
+    "profile": "Profile - Architeque",
+    "checkout-status": "Checkout status - Architeque",
+    "subscriptions": "Subscriptions - Architeque",
+    "billing": "Billing - Architeque"
   }
 }

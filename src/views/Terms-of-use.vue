@@ -14,6 +14,17 @@
   </div>
 </template>
 
+<script>
+export default {
+    created() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["terms-of-use"];
+    },
+    updated() {
+      document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["terms-of-use"];
+    }
+}
+</script>
+
 <style lang="scss">
 
 .terms-of-use {
