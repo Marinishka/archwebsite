@@ -40,7 +40,7 @@ export default {
 }
 
 .terms-of-use__text {
-  @extend .support-title-text;
+  @extend .support-text;
 }
 
 </style>

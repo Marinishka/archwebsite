@@ -77,7 +77,7 @@ export default {
 }
 
 .privacy-policy__text {
-  @extend .support-title-text;
+  @extend .support-text;
 }
 
 .privacy-policy__list {
@@ -88,6 +88,7 @@ export default {
   line-height: 1.5;
 
 @extend .font-main;
+
   @media (min-width: $tablet-width) {
     padding-left: 27px;
   }

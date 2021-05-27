@@ -125,12 +125,12 @@ $font-main: $font-Nunito;
   }
 }
 
-.support-title-text {
+.support-text {
   font-size: 16px;
   line-height: 1.5;
   text-align: justify;
 
-@extend .font-title;
+@extend .font-main;
 
   @media (min-width: $tablet-width) {
     font-size: 18px !important;
