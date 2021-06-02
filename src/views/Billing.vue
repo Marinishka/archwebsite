@@ -5,8 +5,8 @@
         <h3>{{ $t('billing.billing-history') }}</h3>
         <hr>
         <!--<a  href="">Download all invoices</a> <a href="" class="ml-4">Send all invoices to my email</a>-->
-        <b-table striped hover :fields=fields :items="invoices" class="mt-4">
-          <template #cell(status)="row"><span :class="statusClass(row.item.status)">{{row.item.status}}</span></template>
+        <b-table responsive  striped hover :fields=fields :items="invoices" class="mt-4">
+          <template #table-caption(status)="row"><span :class="statusClass(row.item.status)">{{row.item.status}}</span></template>
           <template #cell(actions)="row"><span v-html="row.item.actions"></span></template>
         </b-table>
       </b-overlay>

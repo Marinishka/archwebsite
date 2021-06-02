@@ -1,8 +1,8 @@
 <template>
   <b-container class="mw-800">
     <b-jumbotron class="shadow-sm wrapper">
-      <b-row>
-        <b-col cols="3">
+      <b-row class="account__nav">
+        <b-col md="3">
           <b-nav pills vertical>
            <b-nav-item :to="{name: 'Profile'}" exact-active-class="active" exact><svg width="14" height="15" viewBox="0 0 14 15" xmlns="http://www.w3.org/2000/svg">
 <path d="M7 0.5C3.14765 0.5 0 3.63199 0 7.5C0 11.3523 3.13199 14.5 7 14.5C10.868 14.5 14 11.3523 14 7.5C14 3.64765 10.8523 0.5 7 0.5ZM7 4.08613C8.19016 4.08613 9.17673 5.05705 9.17673 6.26286C9.17673 7.45302 8.20582 8.4396 7 8.4396C5.79418 8.4396 4.82327 7.45302 4.82327 6.2472C4.82327 5.05705 5.80984 4.08613 7 4.08613ZM7 13.0593C5.6689 13.0593 4.44743 12.5895 3.49217 11.8065C4.49441 10.7103 5.71588 10.0996 7 10.0996C8.28412 10.0996 9.52125 10.6946 10.5078 11.8065C9.55257 12.5895 8.3311 13.0593 7 13.0593Z"/>
@@ -20,7 +20,7 @@
           <b-nav-item class="mt-2" :to="{name: 'Logout'}" exact-active-class="active">{{ $t('account.logout') }}</b-nav-item>
          </b-nav>
        </b-col>
-       <b-col cols="9">
+       <b-col md="9">
         
         <b-card>
           <b-card-text>
@@ -48,3 +48,16 @@
     }
   }
 </script>
+
+<style lang="scss">
+.account__nav {
+  flex-direction: column;
+
+@extend .font-main;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+</style>
