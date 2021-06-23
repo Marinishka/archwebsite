@@ -4,12 +4,15 @@
   }
 
   .jumbotron {
-    padding: 3rem 7rem;
+    padding: 3rem 3rem;
 
     background-color: #ffffff;
     background-clip: border-box;
     border: solid $secondary 1px;
     border-radius: 1em;
+    @media (min-width: $tablet-width) {
+      padding: 3em 7em;
+    }
   }
   body {
     background-color: #f4f6f9;
@@ -42,6 +45,9 @@
   }
   .nav-pills .nav-link:hover:not(.active) {
     background-color: $secondary;
+  }
+  .alert {
+    overflow: scroll;
   }
 }
 .nav-link.active svg {

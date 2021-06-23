@@ -39,6 +39,7 @@ export default {
   },
   created(){
     document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["login"];
+    document.addEventListener("keydown", this.onEnterClick);
     console.log(this.$i18n)
     //this.$i18n.locale = 'ru';
   },
@@ -73,6 +74,11 @@ export default {
         });
       //this.$store.commit("login");
       //this.$router.push({name: 'Profile'});
+    },
+    onEnterClick(evt) {
+      if (evt.keyCode === 13) {
+        this.login()
+      }
     }
   }
 }
