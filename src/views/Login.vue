@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { KeyCodes } from '../const';
 export default {
   data() {
     return {
@@ -76,7 +77,7 @@ export default {
       //this.$router.push({name: 'Profile'});
     },
     onEnterClick(evt) {
-      if (evt.keyCode === 13) {
+      if (evt.keyCode === KeyCodes.ENTER) {
         this.login()
       }
     }
