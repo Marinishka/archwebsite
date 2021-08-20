@@ -32,7 +32,7 @@
               </dd>
             </div>
           </dl>
-          <b-link :to="{name: 'Subscriptions'}" class="catalog__btn btn">{{$t('pricing.link-to-subscriptions')}}</b-link>
+          <b-link class="catalog__btn btn">{{$t('pricing.link-to-subscriptions')}}</b-link>
         </li>
         <div class="catalog-list__item catalog-item catalog-item-wrapper--popular">
           <li class="catalog-item--popular">
@@ -62,7 +62,7 @@
                 </dd>
               </div>
             </dl>
-            <b-link :to="{name: 'Subscriptions'}" class="catalog__btn btn">{{$t('pricing.link-to-subscriptions')}}</b-link>
+            <b-link class="catalog__btn btn">{{$t('pricing.link-to-subscriptions')}}</b-link>
           </li>
         </div>
         <li class="catalog-list__item catalog-item">
@@ -89,7 +89,7 @@
               </dd>
             </div>
           </dl>
-          <b-link :to="{name: 'Subscriptions'}" class="catalog__btn btn">{{$t('pricing.link-to-subscriptions')}}</b-link>
+          <b-link class="catalog__btn btn">{{$t('pricing.link-to-subscriptions')}}</b-link>
         </li>
       </ul>
     </div>

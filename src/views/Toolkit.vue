@@ -34,7 +34,7 @@ export default {
         link = LinkApp.MAC;
       } else {
         link = LinkApp.WIN;
-      } 
+      }
       return link;
     },
     operationSystem: function() {
@@ -111,6 +111,11 @@ export default {
   text-decoration: underline !important;
 
 @extend .font-main;
+}
+
+.toolkit__link-to-other-version:hover,
+.toolkit__link-to-other-version:focus {
+  text-decoration: none !important;
 }
 
 </style>

@@ -70,6 +70,11 @@ $font-main: $font-Nunito;
   background-image: url("~@/assets/icon-right-arrow.svg");
 }
 
+.button:hover,
+.button:focus {
+  text-decoration: underline !important;
+};
+
 .title-chapter {
   margin-bottom: 35px !important;
 
@@ -142,6 +147,7 @@ $font-main: $font-Nunito;
 }
 
 .visually-hidden {
+  font-size: 0 !important;
   position: absolute;
 
   width: 1px;

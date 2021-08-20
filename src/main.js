@@ -21,10 +21,6 @@ Vue.use(VueAxios, axios);
 Vue.use(ModalPlugin);
 Vue.config.productionTip = false
 
-//const i18n = new VueI18n({
-//  locale: "ru"
-//});
-
 const getLang = () => {
   let lang = "";
 
@@ -46,7 +42,7 @@ const getLang = () => {
 const i18n = new VueI18n({
   locale: getLang(),
   messages: {
-    en, 
+    en,
     ru
   }
 })
