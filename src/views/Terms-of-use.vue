@@ -9,7 +9,6 @@
     <section>
       <h2 class="terms-of-use__section-title">{{$t('terms-of-use.second.title')}}</h2>
       <p class="terms-of-use__text">{{$t('terms-of-use.second.text')}}</p>
-      <p class="terms-of-use__text"><a href="mailto:Info@ar-chiteque.com">Info@ar-chiteque.com</a></p>
     </section>
   </div>
 </template>
