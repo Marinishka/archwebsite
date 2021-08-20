@@ -47,7 +47,6 @@
     <section class="privacy-policy__section">
       <h2 class="privacy-policy__section-title">{{$t('privacy-policy.ninth.title')}}</h2>
       <p class="privacy-policy__text">{{$t('privacy-policy.ninth.text')}}</p>
-      <p class="terms-of-use__text"><a href="mailto:Info@ar-chiteque.com">Info@ar-chiteque.com</a></p>
     </section>
   </div>
 </template>
