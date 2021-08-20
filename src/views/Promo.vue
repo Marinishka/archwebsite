@@ -190,7 +190,7 @@ export default {
 
 .promo__img {
   display: none;
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     position: absolute;
     right: 0;
     bottom: -130px;
