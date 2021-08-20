@@ -7,7 +7,7 @@
   "header":  {
     "navigation": {
       "toolkit" : "Tools",
-      "pricing": "Pricing" 
+      "pricing": "Pricing"
     },
     "user-block": {
       "unlogged": "Sign in",
@@ -101,7 +101,7 @@
         "link-list": {
           "first": "Facebook",
           "second": "Instagram",
-          "third": "Twitter" 
+          "third": "Twitter"
         }
       }
     },
@@ -169,39 +169,6 @@
       }
     }
   },
-  "account": {
-    "profile": "Profile",
-    "subscriptions": "Subscriptions",
-    "billing-history": "Billing History",
-    "logout": "Logout"
-  },
-  "billing": {
-    "billing-history": "Billing History",
-    "status": "Status",
-    "subscription": "Subscription",
-    "actions": "Actions",
-    "amount": "Amount",
-    "date": "Date",
-    "pending": "Pending",
-    "success": "Success",
-    "failed": "Failed",
-    "download-pdf": "Download PDF"
-  },
-  "checkoutStatus": {
-    "title": "Checkout Status Check",
-    "completed": "Subscription upgraded",
-    "link": "Subscriptions"
-  },
-  "login": {
-    "title": "Login",
-    "password": "Password",
-    "email": "Email",
-    "login-btn": "Log in",
-    "no-account": "No account?",
-    "register-link": "Register",
-    "forgot-password": "Forgot password?",
-    "click-here": "Click here"
-  },
   "404": {
     "title": "Error 404",
     "text": "Page not found."
@@ -265,50 +232,6 @@
       "text": "If you have any questions or suggestions about our Terms and Conditions, do not hesitate to contact us."
     }
   },
-  "profile": {
-    "title": "Profile",
-    "save-btn": "Save",
-    "update-btn": "Update",
-    "old-password": "Old password",
-    "new-password": "New password",
-    "password-confirmation": "Password confirmation",
-    "email": "Email",
-    "name": "Name",
-    "passwords-do-not-match": "Passwords do not match",
-    "field-required": "Field is required"
-  },
-  "register": {
-    "title": "Registration",
-    "password": "Password",
-    "retype-password": "Re-type password",
-    "email": "Email",
-    "login-btn": "Log in",
-    "name": "Name",
-    "register": "Register",
-    "forgot-password": "Forgot password?",
-    "have-account": "Have account?",
-    "click-here": "Click here"
-  },
-  "reset-password": {
-    "title": "Recover your password",
-    "email": "Email",
-    "login-btn": "Login",
-    "reset-password": "Reset password",
-    "remember-password": "Remember your password?",
-    "instruction-sent": "We have sent you instruction how to recover your password"
-  },
-  "subscriptions": {
-    "cancel-header": "Cancel Subscription ",
-    "title": "Subscriptions",
-    "cancel": "Cancel",
-    "cancel-confirm": "Are you sure you want to cancel you subscription?",
-    "currently-you-have": "Currently, you have",
-    "activated": " activated",
-    "Activated": "Activated",
-    "cancel-subscription": "Cancel subscription",
-    "remain-active_until": "It will remain active until",
-    "upgrade": "Upgrade"
-  },
   "titles": {
     "home": "Architeque - augmented reality app",
     "toolkit": "Toolkit - Architeque",
@@ -316,12 +239,6 @@
     "login": "Login - Architeque",
     "not-found": "Page not found - Architeque",
     "terms-of-use": "Terms of use - Architeque",
-    "privacy-policy": "Privacy policy - Architeque",
-    "register": "Registration - Architeque",
-    "reset-password": "Reset password - Architeque",
-    "profile": "Profile - Architeque",
-    "checkout-status": "Checkout status - Architeque",
-    "subscriptions": "Subscriptions - Architeque",
-    "billing": "Billing - Architeque"
+    "privacy-policy": "Privacy policy - Architeque"
   }
 }

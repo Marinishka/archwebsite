@@ -20,8 +20,7 @@
             <router-link class="header-nav-list__link" :to="{name: 'Pricing'}">{{$t('header.navigation.pricing')}}</router-link>
           </li>
           <li class="user-block">
-            <b-link  :to="{name: 'Login'}" class="sign-in-link link" v-if="this.$store.state.isLoggedIn === false">{{$t('header.user-block.unlogged')}}</b-link>
-            <b-link :to="{name: 'Profile'}" class="sign-in-link link" v-if="this.$store.state.isLoggedIn === true">{{$t('header.user-block.logged')}}</b-link>
+            <b-link class="sign-in-link link" >{{$t('header.user-block.unlogged')}}</b-link>
             <div class="languages" v-bind:class="{languagesOpen: isLangSelectVisible}" v-on:mouseleave="onLangSelectOut">
               <button class="languages-select-item__btn" v-on:click="onLangBtnClick" v-bind:value="this.$root.$i18n.locale">{{languages[this.$root.$i18n.locale]}}</button>
               <ul class="languages-select" v-if="isLangSelectVisible">
@@ -83,6 +82,7 @@ export default {
 .header {
   padding-top: 20px;
   padding-bottom: 40px;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     display: flex;

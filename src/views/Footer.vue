@@ -56,17 +56,17 @@
               {{$t('footer.nav-col.third.title')}}
             </dt>
             <dd class="footer-nav__item">
-              <b-link href="mailto:models@ar-chiteque.com" class="footer-nav__link">
+              <b-link class="footer-nav__link">
                 {{$t('footer.nav-col.third.link-list.first')}}
               </b-link>
             </dd>
             <dd class="footer-nav__item">
-              <b-link href="mailto:postcards@ar-chiteque.com" class="footer-nav__link">
+              <b-link class="footer-nav__link">
                 {{$t('footer.nav-col.third.link-list.second')}}
               </b-link>
             </dd>
             <dd class="footer-nav__item">
-              <b-link href="mailto:feedback@ar-chiteque.com" class="footer-nav__link">
+              <b-link class="footer-nav__link">
                 {{$t('footer.nav-col.third.link-list.third')}}
               </b-link>
             </dd>
@@ -78,19 +78,19 @@
               {{$t('footer.nav-col.fourth.title')}}
             </dt>
             <dd class="footer-nav__item">
-              <b-link class="footer-nav__link" href="https://www.facebook.com/ARchitequeApp/">
+              <b-link class="footer-nav__link">
                 <IconFacebook class="footer-nav__icon"></IconFacebook>
                 <p class="footer-nav__social-network-name">{{$t('footer.nav-col.fourth.link-list.first')}}</p>
               </b-link>
             </dd>
             <dd class="footer-nav__item">
-              <b-link class="footer-nav__link" href="https://www.instagram.com/ar_chiteque/">
+              <b-link class="footer-nav__link">
                 <IconInstagram class="footer-nav__icon"></IconInstagram>
                 <p class="footer-nav__social-network-name">{{$t('footer.nav-col.fourth.link-list.second')}}</p>
               </b-link>
             </dd>
             <dd class="footer-nav__item">
-              <b-link class="footer-nav__link" href="https://twitter.com/architeque1">
+              <b-link class="footer-nav__link">
                 <IconTwitter class="footer-nav__icon"></IconTwitter>
                 <p class="footer-nav__social-network-name">{{$t('footer.nav-col.fourth.link-list.third')}}</p>
               </b-link>
@@ -115,7 +115,7 @@ export default {
   computed: {
     hrefApp: function() {
       let os = "";
-  
+
        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       if (/android/i.test(userAgent)) {
         os = "Android";
@@ -124,9 +124,9 @@ export default {
       } else {
         os = "unknown";
       }
-      
+
       if (os === "Android") {
-        return "https://play.google.com/store/apps/details?id=com.architeque.android.app"; 
+        return "https://play.google.com/store/apps/details?id=com.architeque.android.app";
       } else {
         return "https://itunes.apple.com/app/apple-store/id1447699048";
       }

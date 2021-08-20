@@ -7,7 +7,7 @@
   "header":  {
     "navigation": {
       "toolkit" : "Инструменты",
-      "pricing": "Цены" 
+      "pricing": "Цены"
     },
     "user-block": {
       "unlogged": "Войти",
@@ -101,7 +101,7 @@
         "link-list": {
           "first": "Facebook",
           "second": "Instagram",
-          "third": "Twitter" 
+          "third": "Twitter"
         }
       }
     },
@@ -169,39 +169,6 @@
       }
     }
   },
-  "account": {
-    "profile": "Профиль",
-    "subscriptions": "Подписки",
-    "billing-history": "Счета",
-    "logout": "Выход"
-  },
-  "billing": {
-    "billing-history": "История платежей",
-    "status": "Статус",
-    "subscription": "Подписка",
-    "actions": "Действия",
-    "amount": "Сумма",
-    "date": "Дата",
-    "pending": "В ожидании",
-    "success": "Успешно",
-    "failed": "Не удалось",
-    "download-pdf": "Сохранить PDF"
-  },
-  "checkoutStatus": {
-    "title": "Проверка статуса оформления заказа",
-    "completed": "Подписка обновлена",
-    "link": "Подписки"
-  },
-  "login": {
-    "title": "Вход",
-    "password": "Пароль",
-    "email": "Почтовый адрес",
-    "login-btn": "Войти",
-    "no-account": "Нет аккаунта?",
-    "register-link": "Регистрация",
-    "forgot-password": "Забыли пароль?",
-    "click-here": "Нажмите здесь"
-  },
   "404": {
     "title": "Ошибка 404",
     "text": "Страница не найдена."
@@ -265,50 +232,6 @@
       "text": "Если у вас есть какие-либо вопросы или предложения относительно наших Положений и условий, не стесняйтесь обращаться к нам."
     }
   },
-  "profile": {
-    "title": "Профиль",
-    "save-btn": "Сохранить",
-    "update-btn": "Изменить",
-    "old-password": "Старый пароль",
-    "new-password": "Новый пароль",
-    "password-confirmation": "Подтверджение пароля",
-    "email": "Почтовый адрес",
-    "name": "Имя",
-    "passwords-do-not-match": "Пароли не совпадают",
-    "field-required": "Необходимо заполнить"
-  },
-  "register": {
-    "title": "Вход",
-    "password": "Пароль",
-    "retype-password": "Введите пароль еще раз",
-    "email": "Почтовый адрес",
-    "login-btn": "Войти",
-    "name": "Имя",
-    "register": "Зарегистрироваться",
-    "forgot-password": "Забыли пароль?",
-    "have-account": "Есть аккаунт?",
-    "click-here": "Нажмите здесь"
-  },
-  "reset-password": {
-    "title": "Восстановление пароля",
-    "email": "Почтовый адрес",
-    "login-btn": "Войти",
-    "reset-password": "Восстановить пароль",
-    "remember-password": "Вспомнили пароль?",
-    "instruction-sent": "Инструкция по восстановлению пароля отправлена на ваш электронный адрес"
-  },
-  "subscriptions": {
-    "cancel-header": "Отмена Подписки ",
-    "title": "Подписки",
-    "cancel": "Отмена",
-    "cancel-confirm": "Вы уверены, что хотите отказаться от подписки?",
-    "currently-you-have": "Текущая подписка",
-    "activated": " ",
-    "Activated": "Активная",
-    "cancel-subscription": "Отменить подписку",
-    "remain-active-until": "Подписка останется активной до",
-    "upgrade": "Обновить"
-  },
   "titles": {
     "home": "Architeque - приложение дополненной реальности",
     "toolkit": "Инструменты - Architeque",
@@ -316,12 +239,6 @@
     "login": "Войти в личный кабинет - Architeque",
     "not-found": "Страница не найдена - Architeque",
     "terms-of-use": "Условия и положения - Architeque",
-    "privacy-policy": "Политика конфиденциальности - Architeque",
-    "register": "Зарегистрироваться - Architeque",
-    "reset-password":"Восстановить пароль - Architeque",
-    "profile": "Профиль - Architeque",
-    "checkout-status": "Проверка статуса оформления заказа - Architeque",
-    "subscriptions": "Подписки - Architeque",
-    "billing": "Счета - Architeque"
+    "privacy-policy": "Политика конфиденциальности - Architeque"
   }
 }

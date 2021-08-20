@@ -21,6 +21,10 @@ import Footer from "../views/Footer.vue"
 <style>
 .page {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 </style>
