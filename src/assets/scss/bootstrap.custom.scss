@@ -1,68 +1,74 @@
-  $secondary: #EFEFEF;
-  $secondary-dark: #323232;
-  $primary: #3167F3;
-  $muted: #B5B5B5;
 
-  // Import Bootstrap and BootstrapVue source SCSS files
+// Import Bootstrap and BootstrapVue source SCSS files
 #app-wrapper {
-  @import 'bootstrap/scss/bootstrap.scss';
-  @import 'bootstrap-vue/src/index.scss';  
+  @import "bootstrap/scss/bootstrap.scss";
 
-.muted {
-  background-color: $muted !important;
-}
+@import "bootstrap-vue/src/index.scss";
 
-.muted-text {
-  color: #8D8D8D !important;
-}
+  .muted {
+    background-color: $muted !important;
+  }
 
-.subscription-button {
-  margin-top: 7.5em;
-}
+  .muted-text {
+    color: #8d8d8d !important;
+  }
 
-.border-2 {
-  border: 2px solid rgba(0, 0, 0, 0.125) !important;
-}
+  .subscription-button {
+    margin-top: 7.5em;
+  }
 
-.subscription-1-text {
-  color: #3167F3;
-}
+  .border-2 {
+    border: 2px solid rgba(0, 0, 0, 0.125) !important;
+  }
 
-.subscription-1-button {
-  background-color: #3167F3 !important;
-}
+  .subscription-1-text {
+    color: #3167f3;
+  }
 
-.subscription-2-text {
-  color: #2F36DC;
-}
+  .subscription-1-button {
+    background-color: #3167f3 !important;
+  }
 
-.subscription-2-button {
-  background-color: #2F36DC !important;
-}
+  .subscription-2-text {
+    color: #2f36dc;
+  }
 
-p, span, h1, h2, h3, h4, table, td, th, tr, div {
-  color: #323232 !important;
-}
+  .subscription-2-button {
+    background-color: #2f36dc !important;
+  }
 
+  p:not(.toolkit__text):not(.footer__copyright):not(.footer-nav__social-network-name):not(.btn__inner),
+  span,
+  h1,
+  h2:not(.applying__title),
+  h3,
+  h4,
+  table,
+  td,
+  th,
+  tr,
+  div {
+    color: #323232 !important;
+  }
 
-a.router-link-active {
-  color: #fff !important;
-}
+  a.router-link-active:not(.sign-in-link):not(.header-nav-list__link) {
+    color: #ffffff !important;
+  }
 
-.table th, .table td {
-  border-top: 0 !important;
-}
+  .table th,
+  .table td {
+    border-top: 0 !important;
+  }
 
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #F6F6F6 !important;
-}
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f6f6f6 !important;
+  }
 
-.table-striped tbody tr:nth-of-type(even) {
-    background-color: #FBFBFB !important;
-}
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: #fbfbfb !important;
+  }
 
-.table thead th {
+  .table thead th {
     border-bottom: 0 !important;
-}
-
+  }
 }

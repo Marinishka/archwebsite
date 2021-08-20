@@ -1,44 +1,31 @@
 <template>
-  <b-jumbotron class="shadow-sm">
-    <div>
-
-      <h3>{{ $t('login_header') }}</h3>
-      <b-form-input v-bind:placeholder="$t('email')" v-model="email"></b-form-input>
-      <b-form-input type="password" class="mt-2" v-bind:placeholder="$t('password')" v-model="password"></b-form-input>
-      <b-alert :show="alert.state" :variant="alert.variant" class="mt-2">
+  <b-container class="mw-500">
+    <b-jumbotron class="shadow-sm">
+      <div>
+        <h3>{{ $t('login.title') }}</h3>
+        <b-form-input v-bind:placeholder="$t('email')" v-model="email"></b-form-input>
+        <b-form-input type="password" class="mt-2" v-bind:placeholder="$t('login.password')" v-model="password"></b-form-input>
+        <b-alert :show="alert.state" :variant="alert.variant" class="mt-2">
         {{alert.message}}
-      </b-alert>      
-      <b-button block variant="primary mt-3" @click="login()">{{$t('login_btn')}} </b-button>
-      <div class="mt-4 text-center">{{$t('no_account')}} <router-link class="font-weight-bold" to="/register">{{$t('register_link')}}</router-link></div>
-      <div class="mt-4 text-center fs-075">{{$t('forgot_password')}} <router-link to="/reset-password">{{$t('click_here')}}</router-link></div>
-    </div>
-  </b-jumbotron>
+        </b-alert>      
+        <b-button block variant="primary mt-3" @click="login()">
+          {{$t('login.login-btn')}}
+        </b-button>
+        <div class="mt-4 text-center">
+          {{$t('login.no-account')}}
+          <router-link class="font-weight-bold" :to="{name: 'Register'}">{{$t('login.register-link')}}</router-link>
+        </div>
+        <div class="mt-4 text-center fs-075">
+          {{$t('login.forgot-password')}}
+          <router-link to="/reset-password">{{$t('login.click-here')}}</router-link>
+        </div>
+      </div>
+    </b-jumbotron>
+  </b-container>
 </template>
-<i18n>
-{
-  "en": {
-    "login_header": "Login",
-    "password": "Password",
-    "email": "Email",
-    "login_btn": "Log in",
-    "no_account": "No account?",
-    "register_link": "Register",
-    "forgot_password": "Forgot password?",
-    "click_here": "Click here"
-  },
-  "ru": {
-    "login_header": "Вход",
-    "password": "Пароль",
-    "email": "Почтовый адрес",
-    "login_btn": "Войти",
-    "no_account": "Нет аккаунта?",
-    "register_link": "Регистрация",
-    "forgot_password": "Забыли пароль?",
-    "click_here": "Нажмите здесь"
-  }
-}
-</i18n>
+
 <script>
+import { KeyCodes } from '../const';
 export default {
   data() {
     return {
@@ -52,8 +39,13 @@ export default {
     }
   },
   created(){
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["login"];
+    document.addEventListener("keydown", this.onEnterClick);
     console.log(this.$i18n)
     //this.$i18n.locale = 'ru';
+  },
+  updated() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["login"];
   },
   mounted(){
     console.log("this.$route",this.$route.query, this.$route.query.message);
@@ -83,6 +75,11 @@ export default {
         });
       //this.$store.commit("login");
       //this.$router.push({name: 'Profile'});
+    },
+    onEnterClick(evt) {
+      if (evt.keyCode === KeyCodes.ENTER) {
+        this.login()
+      }
     }
   }
 }

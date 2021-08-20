@@ -1,48 +1,29 @@
 <template>
-  <b-jumbotron class="shadow-sm">
-    <div>
-      <h3>{{ $t('login_header') }}</h3>
-      <b-form-input v-bind:placeholder="$t('email')" v-model="email"></b-form-input>
-      <b-form-input class="mt-2" v-bind:placeholder="$t('name')" v-model="name"></b-form-input>
-      <b-form-input class="mt-2" type="password" v-bind:placeholder="$t('password')" v-model="password"></b-form-input>
-      <b-form-input class="mt-2" type="password" v-bind:placeholder="$t('retype_password')" v-model="password2"></b-form-input>
-      <b-alert :show="error.state" variant="danger" class="mt-2">
+  <b-container class="mw-500">
+    <b-jumbotron class="shadow-sm">
+      <div>
+        <h3>{{ $t('register.title') }}</h3>
+        <b-form-input v-bind:placeholder="$t('register.email')" v-model="email"></b-form-input>
+        <b-form-input class="mt-2" v-bind:placeholder="$t('register.name')" v-model="name"></b-form-input>
+        <b-form-input class="mt-2" type="password" v-bind:placeholder="$t('register.password')" v-model="password"></b-form-input>
+        <b-form-input class="mt-2" type="password" v-bind:placeholder="$t('register.retype-password')" v-model="password2"></b-form-input>
+        <b-alert :show="error.state" variant="danger" class="mt-2">
         {{error.cause}}
-      </b-alert>      
-      <b-button block variant="primary mt-3" @click="register">{{ $t('register') }}</b-button>
-      <div class="mt-4 text-center">{{ $t('have_account') }} <router-link class="font-weight-bold" to="/login">{{ $t('login_btn') }}</router-link></div>
-      <div class="mt-4 text-center fs-075">{{ $t('forgot_password') }} <router-link to="/reset-password">{{ $t('click_here') }}</router-link></div>
-    </div>
-  </b-jumbotron>
+        </b-alert>      
+        <b-button block variant="primary mt-3" @click="register">{{ $t('register.register') }}</b-button>
+        <div class="mt-4 text-center">
+          {{ $t('register.have-account') }} 
+          <router-link class="font-weight-bold" :to="{name: 'Login'}">{{ $t('register.login-btn') }}</router-link>
+        </div>
+        <div class="mt-4 text-center fs-075">
+          {{ $t('register.forgot-password') }} 
+        <router-link :to="{name: 'ResetPassword'}">{{ $t('register.click-here') }}</router-link>
+        </div>
+      </div>
+    </b-jumbotron>
+  </b-container>
 </template>
-<i18n>
-{
-  "en": {
-    "login_header": "Registration",
-    "password": "Password",
-    "retype_password": "Re-type password",
-    "email": "Email",
-    "login_btn": "Log in",
-    "name": "Name",
-    "register": "Register",
-    "forgot_password": "Forgot password?",
-    "have_account": "Have account?",
-    "click_here": "Click here"
-  },
-  "ru": {
-    "login_header": "Вход",
-    "password": "Пароль",
-    "retype_password": "Введите пароль еще раз",
-    "email": "Почтовый адрес",
-    "login_btn": "Войти",
-    "name": "Имя",
-    "register": "Зарегистрироваться",
-    "forgot_password": "Забыли пароль?",
-    "have_account": "Есть аккаунт?",
-    "click_here": "Нажмите здесь"
-  }
-}
-</i18n>
+
 <script>
 export default {
   data(){
@@ -59,6 +40,12 @@ export default {
   },
   mounted(){
 
+  },
+  created() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["register"];
+  },
+  updated() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["register"];
   },
   methods: {
     register() {

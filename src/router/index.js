@@ -9,93 +9,110 @@ import Profile from '../views/Profile.vue'
 import Subscriptions from '../views/Subscriptions.vue'
 import Billing from '../views/Billing.vue'
 import CheckoutStatus from '../views/CheckoutStatus.vue'
+import Home from '../views/Home-page.vue'
+import Pricing from '../views/Pricing.vue'
+import Toolkit from '../views/Toolkit.vue'
+import Account from '../views/Account.vue'
+import PrivacyPolicy from '../views/Privacy-policy'
+import TermsOfUse from '../views/Terms-of-use.vue'
+import NotFound from '../views/Not-found.vue'
 import store from '../store'
 
 Vue.use(VueRouter)
 
 const routes = [{
-    path: '/login',
-    name: 'Login',
-    component: Login,
-    meta: {
-      layout: 'blank',
-    }
-  }, {
+  path: '/',
+  name: 'Home',
+  component: Home
+}, {
+  path: '/pricing',
+  name: 'Pricing',
+  component: Pricing
+}, {
+  path: '/toolkit',
+  name: 'Toolkit',
+  component: Toolkit
+}, {
+  path: '/login',
+  name: 'Login',
+  component: Login,
+}, {
     path: '/logout',
     name: 'Logout',
     beforeEnter: function(to, from, next) {
       store.commit("logout");
       next("/login");
     },
-    meta: {
-      layout: 'blank',
-    }
   }, {
     path: '/register',
     name: 'Register',
-    component: Register,
-    meta: {
-      layout: 'blank',
-    }
+    component: Register
   }, {
     path: '/reset-password',
     name: 'ResetPassword',
     component: ResetPassword,
-    meta: {
-      layout: 'blank',
-    }
-  },
-  /* {
-    path: '/profile',
-    name: 'Profile',
-    component: Profile,
-    meta: {
-      layout: 'default',
-      requiresAuth: true
-    }
-  },*/
-  {
-    path: '/checkout/status',
-    name: 'CheckoutStatus',
-    component: CheckoutStatus,
-    meta: {
-      layout: 'default',
-      requiresAuth: true
-    }
   }, {
-    path: '/subscriptions',
-    name: 'Subscriptions',
-    component: Subscriptions,
-    meta: {
-      layout: 'default',
-      requiresAuth: true
-    }
+    path: '/account',
+    name: 'Account',
+    component: Account,
+    children: [
+      {
+          path: 'profile',
+          name: 'Profile',
+          component: Profile,
+          meta: {
+            requiresAuth: true
+          }
+        }, {
+            path: 'checkout/status',
+            name: 'CheckoutStatus',
+            component: CheckoutStatus,
+            meta: {
+              requiresAuth: true
+            }
+          }, {
+            path: 'subscriptions',
+            name: 'Subscriptions',
+            component: Subscriptions,
+            meta: {
+              requiresAuth: true
+            }
+          }, {
+            path: 'billing-history',
+            name: 'Billing',
+            component: Billing,
+            meta: {
+              requiresAuth: true
+            }
+          }
+    ]
   }, {
-    path: '/billing-history',
-    name: 'Billing',
-    component: Billing,
-    meta: {
-      layout: 'default',
-      requiresAuth: true
-    }
+    path: '/privacy-policy',
+    name: 'Privacy policy',
+    component: PrivacyPolicy
   }, {
-    path: '/',
-    name: 'Profile',
-    component: Profile,
-    meta: {
-      layout: 'default',
-      requiresAuth: true
-    }
+    path: '/terms-of-use',
+    name: 'Terms of use',
+    component: TermsOfUse
+  }, {
+    path: '*',
+    name: 'Not Found',
+    component: NotFound
   }
+  
 ]
 
 const router = new VueRouter({
   //mode: 'history',
   //base: "/portal/",
-  routes
+  routes,
+  scrollBehavior() {
+    return { x: 0, y: 0 }
+  }
 })
 
 router.beforeEach((to, from, next) => {
+  document.title= to.meta.title;
   if (to.matched.some(record => record.meta.requiresAuth)) {
     // this route requires auth, check if logged in
     // if not, redirect to login page.

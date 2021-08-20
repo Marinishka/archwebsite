@@ -2,11 +2,11 @@
   <b-row>
     <b-col style="min-height:200px;">
       <b-overlay :show="isCheckingPaymentStatus" rounded="sm">
-        <h3>Checkout Status Check</h3>
+        <h3>{{$t('checkoutStatus.title')}}</h3>
         <hr>
         <b-alert :show="!isCheckingPaymentStatus" :variant="getAlertVariant()" class="text-dark">
-          <span v-if="status=='completed'">Subscription upgraded</span>
-           <router-link to="/subscriptions" class="float-right text-muted"><small >Subscriptions</small></router-link>
+          <span v-if="status=='completed'">{{$t('checkoutStatus.completed')}}</span>
+           <router-link :to="{name: 'Subscriptions'}" class="float-right text-muted"><small >{{$t('checkoutStatus.link')}}</small></router-link>
         </b-alert>
       </b-overlay>
     </b-col>
@@ -25,10 +25,14 @@ export default {
     }
   },
   created() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["checkout-status"];
     console.log("this.$route.query",this.$route.query)
     //let _this = this;
     this.checkStatus();
     
+  },
+  updated() {
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["checkout-status"];
   },
   methods: {
     getAlertVariant() {

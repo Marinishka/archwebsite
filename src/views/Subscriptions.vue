@@ -2,18 +2,18 @@
   <b-row>
     <b-col>
       <b-overlay :show="subscriptions.length == 0 || !currentSubscription" rounded="sm">
-        <h3>{{ $t('subscriptions') }}</h3>
+        <h3>{{ $t('subscriptions.title') }}</h3>
         <b-alert :show="alert.state" :variant="alert.variant" dismissible class="mt-2">
           {{alert.message}}
         </b-alert>      
-        <b-modal @ok="handleModalOk" :static="true" id="modal-1" v-bind:title="$t('cancel_header') + ' ' + currentSubscription.name">
-          <p class="my-4">{{ $t('cancel_confirm') }}</p>
+        <b-modal @ok="handleModalOk" :static="true" id="modal-1" v-bind:title="$t('subscriptions.cancel-header') + ' ' + currentSubscription.name">
+          <p class="my-4">{{ $t('subscriptions.cancel-confirm') }}</p>
         </b-modal>
         <hr>
         <b-alert show variant="warning" class="text-dark">
-          <b-icon-check2-circle variant="success"></b-icon-check2-circle> {{ $t('currently_you_have') }} <b>{{currentSubscription.name}}</b>{{ $t('activated') }}.
-          <a class="float-right text-muted" v-if="currentSubscription.statusCode == 2" v-b-modal.modal-1><small v-if="currentSubscription.price > 0">{{ $t('cancel_subscription') }}</small></a>
-          <span v-if="currentSubscription.status == 3">{{ $t('remain_active_until') }} {{moment(currentSubscription.endTime).format('DD.MM.YYYY HH:mm')}}</span>
+          <b-icon-check2-circle variant="success"></b-icon-check2-circle> {{ $t('subscriptions.currently-you-have') }} <b>{{currentSubscription.name}}</b>{{ $t('subscriptions.activated') }}.
+          <a class="float-right text-muted" v-if="currentSubscription.statusCode == 2" v-b-modal.modal-1><small v-if="currentSubscription.price > 0">{{ $t('subscriptions.cancel-subscription') }}</small></a>
+          <span v-if="currentSubscription.status == 3">{{ $t('subscriptions.remain-active-until') }} {{moment(currentSubscription.endTime).format('DD.MM.YYYY HH:mm')}}</span>
         </b-alert>
         <b-card class="border-2 mt-3" v-for="subscription in subscriptions" :key="subscription.id">
           <b-card-text>
@@ -27,8 +27,8 @@
               <b-col>
                 <h1 class="float-right">{{subscription.priceDescription}}</h1>
                 <span>
-                  <b-button v-if="(currentSubscription.statusCode == 1 || currentSubscription.statusCode == 2 || currentSubscription.statusCode == 3) && subscription.id == currentSubscription.id" variant="secondary" block disabled class="subscription-button text-white muted">{{ $t('Activated') }}</b-button>
-                  <b-button v-else variant="primary" block class="subscription-button subscription-2-button text-white" @click="upgradeSubscription(subscription)">{{ $t('upgrade') }}</b-button>    
+                  <b-button v-if="(currentSubscription.statusCode == 1 || currentSubscription.statusCode == 2 || currentSubscription.statusCode == 3) && subscription.id == currentSubscription.id" variant="secondary" block disabled class="subscription-button text-white muted">{{ $t('subscriptions.Activated') }}</b-button>
+                  <b-button v-else variant="primary" block class="subscription-button subscription-2-button text-white" @click="upgradeSubscription(subscription)">{{ $t('subscriptions.upgrade') }}</b-button>    
                 </span>
               </b-col>
             </b-row>
@@ -39,34 +39,7 @@
     </b-col>
   </b-row>
 </template>
-<i18n>
-  {
-    "en": {
-    "cancel_header": "Cancel Subscription ",
-    "subscriptions": "Subscriptions",
-    "cancel": "Cancel",
-    "cancel_confirm": "Are you sure you want to cancel you subscription?",
-    "currently_you_have": "Currently, you have",
-    "activated": " activated",
-    "Activated": "Activated",
-    "cancel_subscription": "Cancel subscription",
-    "remain_active_until": "It will remain active until",
-    "upgrade": "Upgrade"
-  },
-  "ru": {
-  "cancel_header": "Отмена Подписки ",
-  "subscriptions": "Подписки",
-  "cancel": "Отмена",
-  "cancel_confirm": "Вы уверены, что хотите отказаться от подписки?",
-  "currently_you_have": "Текущая подписка",
-  "activated": " ",
-  "Activated": "Активная",
-  "cancel_subscription": "Отменить подписку",
-  "remain_active_until": "Подписка останется активной до",
-  "upgrade": "Обновить"
-}
-}
-</i18n>
+
 <script>
 import _ from 'lodash'
 
@@ -92,6 +65,10 @@ export default {
   created() {
     this.getCurrentSubscription();
     this.getAllSubscription();
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["subscriptions"];
+  },
+  updated(){
+    document.title = this.$root.$i18n.messages[this.$root.$i18n.locale].titles["subscriptions"];
   },
   methods: {
     moment: moment,
